@@ -28,8 +28,6 @@ The project integrates various tools and techniques to develop a dynamic and int
 - **Diverse Visualization Techniques:**  
   The project uses various visuals to represent data on athlete preferences, medal counts, and country performances. Historical data enhances these visuals, allowing for a deeper understanding of trends over time.
 
-## Python Script to Directly Import Kaggle Dataset into Power BI.
-
 ## Python Script to Directly Import Kaggle Dataset into Power BI
 
 This script downloads a dataset from Kaggle and prepares it for use in Power BI.
