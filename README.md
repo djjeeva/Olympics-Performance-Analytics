@@ -29,70 +29,9 @@ The project integrates various tools and techniques to develop a dynamic and int
   The project uses various visuals to represent data on athlete preferences, medal counts, and country performances. Historical data enhances these visuals, allowing for a deeper understanding of trends over time.
 
 ## Python Script to Directly Import Kaggle Dataset into Power BI.
-## Python Script to Directly Import Kaggle Dataset into Power BI
-
-This script downloads a dataset from Kaggle and prepares it for use in Power BI.
-
-```python
-import kaggle
-import os
-import pandas as pd
-
-# Set Kaggle API credentials directory
-os.environ['KAGGLE_CONFIG_DIR'] = 'C:/Users/JEEVA/.kaggle'  # Update this path to your Kaggle configuration directory
-
-# Specify the dataset identifier
-dataset = 'piterfm/paris-2024-olympic-summer-games'
-
-# Set the download path
-download_path = 'C:/Users/JEEVA/Downloads/Olympics dashboard/history' # Change this to your preferred download directory
-
-# Remove existing files in the folder to prevent duplicates or outdated files
-for file in os.listdir(download_path):
-    file_path = os.path.join(download_path, file)
-    try:
-        if os.path.isfile(file_path):
-            os.unlink(file_path)  # Delete the file
-            print(f"Deleted {file_path}")
-    except Exception as e:
-        print(f"Error deleting {file_path}: {e}")
-
-# Download the dataset using the Kaggle API and unzip the files
-kaggle.api.dataset_download_files(dataset, path=download_path, unzip=True)
-
-# List of CSV files to be imported
-csv_files = [
-    'athletes.csv',
-    'events.csv',
-    'medallists.csv',
-    'medals.csv',
-    'medals_total.csv',
-    'schedules.csv',
-    'schedules_preliminary.csv',
-    'teams.csv',
-    'torch_route.csv',
-    'venues.csv'
-]
-
-# Initialize a dictionary to hold DataFrames
-dataframes = {}
-
-# Iterate through each CSV file and load it into a DataFrame
-for file in csv_files:
-    # Construct the full path to the CSV file
-    file_path = os.path.join(download_path, file)
-    
-    # Load the CSV file into a Pandas DataFrame
-    df = pd.read_csv(file_path)
-    
-    # Add the DataFrame to the dictionary using the file name as the key
-    table_name = file.split('.')[0]  # Remove the .csv extension
-    dataframes[table_name] = df
 
 
-
-
- ## Analytics Report
+## Analytics Report
 ![Screenshot 2024-08-23 141823](https://github.com/user-attachments/assets/e1b5078f-394e-4415-8252-8e64fa4c5fec)
 ![Screenshot 2024-08-23 142021](https://github.com/user-attachments/assets/3521c93d-2f92-484a-8cda-6f4d54b93034)
 ![Screenshot 2024-08-23 142035](https://github.com/user-attachments/assets/e1dfe34c-7c03-4b99-85b9-8c4839a9290c)
@@ -100,8 +39,7 @@ for file in csv_files:
 
 
 
-
- ## Distinctive Features
+## Distinctive Features
 
 - **Real-time Data Access:**  
   Direct integration with Kaggle using Python ensures up-to-date information.
