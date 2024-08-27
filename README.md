@@ -29,8 +29,9 @@ The project integrates various tools and techniques to develop a dynamic and int
   The project uses various visuals to represent data on athlete preferences, medal counts, and country performances. Historical data enhances these visuals, allowing for a deeper understanding of trends over time.
 
 ## Python Script to Directly Import Kaggle Dataset into Power BI.
+## Python Script to Directly Import Kaggle Dataset into Power BI
 
-Below is a Python script that downloads and loads data from Kaggle for the Paris 2024 Olympic Summer Games.
+This script downloads a dataset from Kaggle and prepares it for use in Power BI.
 
 ```python
 import kaggle
@@ -89,7 +90,9 @@ for file in csv_files:
     dataframes[table_name] = df
 
 
-## Analytics Report
+
+
+ ## Analytics Report
 ![Screenshot 2024-08-23 141823](https://github.com/user-attachments/assets/e1b5078f-394e-4415-8252-8e64fa4c5fec)
 ![Screenshot 2024-08-23 142021](https://github.com/user-attachments/assets/3521c93d-2f92-484a-8cda-6f4d54b93034)
 ![Screenshot 2024-08-23 142035](https://github.com/user-attachments/assets/e1dfe34c-7c03-4b99-85b9-8c4839a9290c)
@@ -98,7 +101,7 @@ for file in csv_files:
 
 
 
-## Distinctive Features
+ ## Distinctive Features
 
 - **Real-time Data Access:**  
   Direct integration with Kaggle using Python ensures up-to-date information.
